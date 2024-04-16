@@ -27,12 +27,6 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
-p:hover {
-    color: red;
-}
-
-
-
 .center {
     display: flex;
     justify-content: center;
@@ -241,6 +235,7 @@ p:hover {
     line-height: normal;
 }
 
+
 .con4-middle {
     display: flex;
     flex-wrap: wrap;
@@ -248,18 +243,26 @@ p:hover {
     margin-bottom: 48px;
 }
 
-.con4-middle-item {
+.miditem {
+    display: flex;
+    background-color: #FFF;
     width: 360px;
+    position: relative;
+    margin-bottom: 40px;
+  }
+
+.con4-middle-item {
+    width: 100%;
     height: 580px;
 }
 
-.con4-middle-item:hover::before {
+/* .con4-middle-item:hover::before {
     content: 'FREE DELIVERY';
     font-weight: 400;
     color: #F16D7F;
     font-size: 20px;
     text-align: justify;
-}
+} */
 
 /* .cpecial-img {
     z-index: 1;
@@ -303,7 +306,50 @@ p:hover {
     margin-left: 16px;
 }
 
+.miditem__basket {
+    width: 100%;
+    position: absolute;
+    top: 98px;
+    display: none;
+    justify-content: center;
+    pointer-events: none;
+    
+  }
 
+  .miditem__basket__link {
+    display: flex;
+    padding: 8px;
+    border: 1px solid #fff;
+    align-items: center;
+    pointer-events: all;
+    background: transparent;
+  } 
+
+  .miditem__basket__txt {
+    color: white;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 100;
+    line-height: normal;
+    margin-left: 10px;
+  }
+
+
+  .miditem__basket__link:hover {
+    box-shadow: 0px 0px 10px 0px #fff;
+  }
+  
+  .miditem:hover {
+    box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.15);
+  }
+  
+  .miditem:hover .con4-middle-img {
+    filter: brightness(30%);
+  }
+  
+  .miditem:hover .miditem__basket {
+    display: flex;
+  } 
 
 .con4-footer-but {
     color: #F26376;
@@ -321,6 +367,67 @@ p:hover {
     color: #FFF;
     border: 1px solid #FFF;
 }
+
+.new-basket {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 50px;
+  }
+  
+  .card {
+    display: flex;
+    max-width: 450px;
+    max-height: 300px;
+    box-shadow: 17px 19px 24px 0 rgba(0, 0, 0, 0.13);
+    position: relative;
+    box-sizing: border-box;
+    padding: 10px;
+  }
+
+  .card__img {
+    width: 40%;
+    height: 100%;
+  }
+  .card__info {
+    padding: 22px 97px 62px 31px;
+  }
+  .card__title {
+    font-style: 24px;
+    color: #222;
+    padding-bottom: 42px;
+  }
+  .card__content {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .card__item {
+    color: #575757;
+  }
+  .card__span1 {
+    color: #ef5b70;
+  }
+  .card__span2 {
+    color: #6f6e6e;
+  }
+  .card__input {
+    width: 44px;
+    height: 25px;
+    border: 1px solid #eaeaea;
+    padding-left: 15px;
+    font-size: 18px;
+    color: #656565;
+  }
+  .card__close {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: absolute;
+    top: 28px;
+    right: 22px;
+  }
 
 .advantages {
     padding-left: calc(50% - 570px);
